@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CALCULATOR</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type = "text/javascript">
+	function display(n)
+	{
+		document.getElementById("result").value+=n
+	}
+	function solve()
+	{
+		let a=document.getElementById("result").value
+		let b=eval(a)
+		document.getElementById("result").value=b
+	}
+	function clr()
+	{
+		document.getElementById("result").value=""
+	}
+	function product()
+	{
+		var i, no, fact;
+		fact=1;
+		no=Number(document.getElementById("result").value);
+		for(i=1; i<=no; i++)  
+		{
+			fact= fact*i;
+		}  
+		document.getElementById("result").value= fact;
+	}
+	function sum()
+	{
+		var i, no, sum;
+		sum=0;
+		no=Number(document.getElementById("result").value);
+		for(i=1; i<=no; i++)  
+		{
+			sum= sum+i;
+		}  
+		document.getElementById("result").value= sum;
+	}
+</script>
+</head>
+<body>
+	<table border="1">
+	<tr>
+		<td colspan="4"><input type="text" id ="result"></td>
+	</tr>
+	<tr>
+	<td><input type ="button" value="1" onclick="display('1')"></td>
+	<td><input type ="button" value="2" onclick="display('2')"></td>
+	<td><input type ="button" value="3" onclick="display('3')"></td>
+	<td><input type ="button" value="c" onclick="clr()"></td>
+	
+	</tr>
+
+	<tr>
+	<td><input type ="button" value="4" onclick="display('4')"></td>
+	<td><input type ="button" value="5" onclick="display('5')"></td>
+	<td><input type ="button" value="6" onclick="display('6')"></td>
+	<td><input type ="button" value="+" onclick="display('+')"></td>
+	
+	</tr>
+
+	<tr>
+	<td><input type ="button" value="7" onclick="display('7')"></td>
+	<td><input type ="button" value="8" onclick="display('8')"></td>
+	<td><input type ="button" value="9" onclick="display('9')"></td>
+	<td><input type ="button" value="-" onclick="display('-')"></td>
+	
+	</tr>
+	
+	<tr>
+	
+	<td><input type ="button" value="/" onclick="display('/')"></td>
+	<td><input type ="button" value="0" onclick="display('0')"></td>
+	<td><input type ="button" value="*" onclick="display('*')"></td>
+	<td><input type ="button" value="=" onclick="solve()"></td>
+	</tr>
+	<tr>
+	<td><input type ="button" value="&#928" onclick="product()"></td>
+	<td><input type ="button" value="&#931" onclick="sum()"></td>
+	</tr>
+	</table>
+</body>
+</html>

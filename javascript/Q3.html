@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data collection</title>
+<script type="text/javascript">
+	function display(){
+	document.getElementById("data");
+	var div = document.createElement('div');
+	div.setAttribute("id", "tb1");
+	document.getElementById("tb1").innerHTML = "<table border = '1'>" +
+  
+  '<tr>' +
+    '<td>User.Name</td>' +
+    '<td>'document.getElementById("name").value'</td>' +
+  '</tr>' +
+'<tr>' +
+    '<td>User.Address</td>' +
+    '<td>'document.getElementById("address").value'</td>' +
+  '</tr>' +
+	'<tr>'
+    '<td>User.Phone Number</td>' +
+    '<td>'document.getElementById("Phone Number").value'</td>' +
+  '</tr>' +
+	'<tr>' +
+    '<td>User.Email ID</td>' +
+    '<td>'document.getElementById("Email ID").value'</td>' +
+  '</tr>' +
+	'<tr>' +
+    '<td>User.Educational Qualifications</td>' +
+    '<td>'document.getElementById("Qualifications").value'</td>' +
+  '</tr>' +
+	'<tr>' +
+    '<td>User.Age</td>' +
+    '<td>'document.getElementById("Age").value'</td>' +
+  '</tr>'; 
+	}
+</script>
+</head>
+<body>
+<pre>Enter your details below and submit<br>
+<form Id="data" onsubmit="display()">
+	Name:                       <input type="text" name="input" id="name"><br>
+	Address:                    <input type="text" name="input" id="address"><br>
+	Phone Number:               <input type="text" name="input" id="Phone Number"><br>
+	Email ID:                   <input type="text" name="input" id="Email ID"><br>
+	Educational Qualifications: <input type="text" name="input" id="Qualifications"><br>
+	Age:                        <input type="text" name="input" id="Age"><br>
+	<input type="submit" value="submit">
+</form>
+<pre>
+</body>
+</html>
+

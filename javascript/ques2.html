@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function calculate()
+	{
+		arr1 = document.getElementById("userinput").value;
+		let mf = 1;
+		var c=0;
+		let m = 0;
+		let item;
+		for (let i=0; i<arr1.length; i++)
+		{
+        		for (let j=i; j<arr1.length; j++)
+        		{
+                		if (arr1[i] == arr1[j])
+                 		m++;
+                		if (mf<m)
+                		{
+                  		mf=m; 
+               	   		item = arr1[i];
+                		}
+        		}
+			if(c<m)
+			{
+				c=m;
+			}
+       	 	m=0;
+		}
+	document.write("most frequent character in string---");
+	document.write(item);
+	document.write("   occuring ");
+	document.write(c);
+	document.write(" times ");
+	}
+</script>
+</head>
+<body>
+find out most frequent occuring character.....<br>
+<input type="text" id = "userinput"> give me input</input><br><br>
+<button id ="clickme" onclick="calculate()">Calculate</button><br>
+</body>
+</html>
+
+
